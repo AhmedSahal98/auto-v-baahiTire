@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "827199966920",
+    "project_id": "birimo-e949b",
+    "storage_bucket": "birimo-e949b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827199966920:android:91b9988a4699f5ebd49ffd",
+        "android_client_info": {
+          "package_name": "com.autov.baahiTire"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmB5UWA1PQUPMNackGXTIe-5d0MF4DtNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
