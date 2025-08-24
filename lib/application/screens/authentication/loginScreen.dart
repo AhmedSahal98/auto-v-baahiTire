@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:baahiTire_app/application/core/widgets/custombutton.dart';
-import 'package:baahiTire_app/application/screens/authentication/verification_screen.dart';
-import 'package:baahiTire_app/cubit/shirkadahaCubits.dart';
+import 'package:degdeg_app/application/core/widgets/custombutton.dart';
+import 'package:degdeg_app/application/screens/authentication/verification_screen.dart';
+import 'package:degdeg_app/cubit/shirkadahaCubits.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

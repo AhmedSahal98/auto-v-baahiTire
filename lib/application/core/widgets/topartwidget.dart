@@ -1,4 +1,4 @@
-import 'package:baahiTire_app/application/screens/HelpCenter%20.dart';
+import 'package:degdeg_app/application/screens/HelpCenter%20.dart';
 import 'package:flutter/material.dart';
 
 class Topartwidget extends StatelessWidget {
@@ -16,7 +16,7 @@ class Topartwidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(width: 144, height: 120, 'assets/images/baahi.png'),
+            Image.asset(width: 120, height: 110, 'assets/images/degdeg2.jpeg'),
             Row(
               children: [
                 GestureDetector(
@@ -43,10 +43,10 @@ class Topartwidget extends StatelessWidget {
                       ),
                     );
                   },
-                  child: Image.asset('assets/images/headphone1.jpeg'),
+                  child: Image.asset('assets/images/headphones11.png'),
                 ),
                 SizedBox(width: 20),
-                Image.asset('assets/images/notif1.jpeg'),
+                Image.asset('assets/images/bell (1).png'),
               ],
             ),
           ],

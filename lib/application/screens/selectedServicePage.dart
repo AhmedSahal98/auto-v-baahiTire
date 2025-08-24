@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:baahiTire_app/application/core/widgets/services.dart';
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
-import 'package:baahiTire_app/model/serviceDetailModel.dart';
+import 'package:degdeg_app/application/core/widgets/services.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/model/serviceDetailModel.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 

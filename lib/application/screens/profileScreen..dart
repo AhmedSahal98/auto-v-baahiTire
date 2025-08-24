@@ -1,7 +1,7 @@
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:baahiTire_app/application/core/widgets/custombutton.dart';
+import 'package:degdeg_app/application/core/widgets/custombutton.dart';
 
 class ProfileScreen extends StatefulWidget {
   ProfileScreen({super.key});

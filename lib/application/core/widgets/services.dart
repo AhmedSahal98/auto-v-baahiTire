@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:baahiTire_app/application/core/widgets/custombutton.dart';
-import 'package:baahiTire_app/model/serviceDetailModel.dart';
+import 'package:degdeg_app/application/core/widgets/custombutton.dart';
+import 'package:degdeg_app/model/serviceDetailModel.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Services extends StatefulWidget {

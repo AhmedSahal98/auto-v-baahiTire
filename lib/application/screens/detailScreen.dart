@@ -1,11 +1,11 @@
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
-import 'package:baahiTire_app/application/screens/selectedServicePage.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/screens/selectedServicePage.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:baahiTire_app/application/core/widgets/adeegyada.dart';
-import 'package:baahiTire_app/cubit/shirkadaahaState.dart';
-import 'package:baahiTire_app/cubit/shirkadahaCubits.dart';
+import 'package:degdeg_app/application/core/widgets/adeegyada.dart';
+import 'package:degdeg_app/cubit/shirkadaahaState.dart';
+import 'package:degdeg_app/cubit/shirkadahaCubits.dart';
 
 class DetailScreen extends StatefulWidget {
   DetailScreen({super.key});

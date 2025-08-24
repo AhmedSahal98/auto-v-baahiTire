@@ -1,4 +1,4 @@
-name: baahiTire_app
+name: degdeg_app
 description: "A new Flutter project."
 publish_to: "none" 
 version: 1.0.0+1
@@ -43,4 +43,4 @@ flutter:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/baahi.png"
+  image_path: "assets/images/degdeg1.png"

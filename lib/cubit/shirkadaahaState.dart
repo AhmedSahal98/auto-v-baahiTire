@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:equatable/equatable.dart';
-import 'package:baahiTire_app/model/shirkadahaModel.dart';
+import 'package:degdeg_app/model/shirkadahaModel.dart';
 import 'package:flutter/material.dart';
 
 abstract class ShirkadahaStates extends Equatable {}

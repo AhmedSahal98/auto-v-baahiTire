@@ -1,8 +1,8 @@
-import 'package:baahiTire_app/application/screens/favorites.dart';
+import 'package:degdeg_app/application/screens/favorites.dart';
 import 'package:flutter/material.dart';
-import 'package:baahiTire_app/application/screens/profileScreen..dart';
-import 'package:baahiTire_app/application/screens/historyScreen.dart';
-import 'package:baahiTire_app/application/screens/homeScreen.dart';
+import 'package:degdeg_app/application/screens/profileScreen..dart';
+import 'package:degdeg_app/application/screens/historyScreen.dart';
+import 'package:degdeg_app/application/screens/homeScreen.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   CustomNavigationBar({super.key});

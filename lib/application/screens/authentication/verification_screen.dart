@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:baahiTire_app/application/core/widgets/custombutton.dart';
-import 'package:baahiTire_app/application/navigationBar.dart';
+import 'package:degdeg_app/application/core/widgets/custombutton.dart';
+import 'package:degdeg_app/application/navigationBar.dart';
 
 class verification_screen extends StatefulWidget {
   const verification_screen({super.key});

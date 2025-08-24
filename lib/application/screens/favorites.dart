@@ -1,4 +1,4 @@
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
 import 'package:flutter/material.dart';
 
 class Favorites extends StatefulWidget {

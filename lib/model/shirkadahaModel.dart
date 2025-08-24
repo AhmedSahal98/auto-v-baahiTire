@@ -1,4 +1,4 @@
-import 'package:baahiTire_app/model/adeegyadaModel.dart';
+import 'package:degdeg_app/model/adeegyadaModel.dart';
 
 class ShirkadaModel {
   String? name;

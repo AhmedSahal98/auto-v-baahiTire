@@ -1,9 +1,9 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:baahiTire_app/cubit/shirkadaahaState.dart';
-import 'package:baahiTire_app/domain/repositories/shirkada_rep.dart';
-import 'package:baahiTire_app/model/shirkadahaModel.dart';
+import 'package:degdeg_app/cubit/shirkadaahaState.dart';
+import 'package:degdeg_app/domain/repositories/shirkada_rep.dart';
+import 'package:degdeg_app/model/shirkadahaModel.dart';
 
 class ShirkadahaCubits extends Cubit<ShirkadahaStates> {
   ShirkadahaCubits({required this.data}) : super(InitialState()) {

@@ -1,4 +1,4 @@
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -43,14 +43,14 @@ class _HelpCenterState extends State<HelpCenter> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                      width: 144, height: 120, 'assets/images/baahi.png'),
+                      width: 120, height: 110, 'assets/images/degdeg2.jpeg'),
                   Row(
                     children: [
                       GestureDetector(
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Image.asset('assets/images/arrow-u-up-left.png'),
+                        child: Image.asset('assets/images/icons8-u-turn-to-left-24.png'),
                       ),
                     ],
                   ),

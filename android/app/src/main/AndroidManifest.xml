@@ -7,7 +7,7 @@
     <application
         android:allowBackup="true"
         android:fullBackupContent="true"
-        android:label="BaahiTire"
+        android:label="Degdeg"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

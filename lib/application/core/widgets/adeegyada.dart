@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:baahiTire_app/model/adeegyadaModel.dart';
+import 'package:degdeg_app/model/adeegyadaModel.dart';
 
 class Adeegyada extends StatefulWidget {
   final List<AdeegyadaModel> adeegyada;

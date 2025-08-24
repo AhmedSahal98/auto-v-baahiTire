@@ -1,13 +1,13 @@
-import 'package:baahiTire_app/application/core/widgets/topartwidget.dart';
+import 'package:degdeg_app/application/core/widgets/topartwidget.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:baahiTire_app/application/core/widgets/shirkadaha.dart';
-import 'package:baahiTire_app/cubit/shirkadaahaState.dart';
-import 'package:baahiTire_app/cubit/shirkadahaCubits.dart';
-import 'package:baahiTire_app/model/shirkadahaModel.dart';
+import 'package:degdeg_app/application/core/widgets/shirkadaha.dart';
+import 'package:degdeg_app/cubit/shirkadaahaState.dart';
+import 'package:degdeg_app/cubit/shirkadahaCubits.dart';
+import 'package:degdeg_app/model/shirkadahaModel.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';

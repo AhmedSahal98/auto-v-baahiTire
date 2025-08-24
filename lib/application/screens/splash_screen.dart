@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:baahiTire_app/cubit/shirkadahaCubits.dart';
+import 'package:degdeg_app/cubit/shirkadahaCubits.dart';
 
 class Splash_screen extends StatefulWidget {
   const Splash_screen({super.key});
@@ -30,12 +30,12 @@ class _Splash_screenState extends State<Splash_screen> {
     );
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 253, 252, 252),
+      backgroundColor: Color(0xfff5f5f5),
       body: Center(
         child: Image.asset(
-          'assets/images/baahi.png',
-          height: 200,
-          width: 200,
+          'assets/images/degdeg2.jpeg',
+          height: 180,
+          width: 180,
         ),
       ),
     );

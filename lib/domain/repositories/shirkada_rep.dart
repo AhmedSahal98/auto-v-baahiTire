@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:baahiTire_app/model/shirkadahaModel.dart';
+import 'package:degdeg_app/model/shirkadahaModel.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ShirkadahaRep {
