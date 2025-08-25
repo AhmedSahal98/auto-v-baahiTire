@@ -27,7 +27,7 @@ class _App_cubit_logicsState extends State<App_cubit_logics> {
           return DetailScreen();
         }
         if (state is LoadedState) {
-          return CustomNavigationBar();
+          return HomeScreen();
         }
         if (state is LoginState || state is RefreshingState) {
           return Splash_screen();

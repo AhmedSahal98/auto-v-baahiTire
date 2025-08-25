@@ -16,7 +16,7 @@ class Topartwidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset(width: 120, height: 110, 'assets/images/degdeg2.jpeg'),
+            Image.asset(width: 100, height: 120, 'assets/images/degdeg2.jpeg'),
             Row(
               children: [
                 GestureDetector(

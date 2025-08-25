@@ -180,129 +180,129 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ),
                                       SizedBox(height: 12),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(16),
-                                            color: Color(0xffF5F5F5)),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            SizedBox(height: 12),
-                                            Image.asset(
-                                                'assets/images/line.png'),
-                                            Container(
-                                              padding: EdgeInsets.only(
-                                                  top: 20, left: 15, right: 15),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'Transactions',
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w500),
-                                                  ),
-                                                  Text(
-                                                    'See all',
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 16),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            ListView.builder(
-                                              padding: EdgeInsets.zero,
-                                              itemCount: transactions.length,
-                                              shrinkWrap: true,
-                                              physics:
-                                                  NeverScrollableScrollPhysics(),
-                                              itemBuilder: (context, index) {
-                                                final transection =
-                                                    transactions[index];
-                                                return GestureDetector(
-                                                  onTap: () {
-                                                    _showPaymentDialog(
-                                                      context,
-                                                      transection,
-                                                    );
-                                                  },
-                                                  child: ListTile(
-                                                    contentPadding:
-                                                        EdgeInsets.only(
-                                                            left: 15,
-                                                            right: 15),
-                                                    leading: Container(
-                                                      padding:
-                                                          EdgeInsets.all(12),
-                                                      decoration: BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                        color: Colors.white,
-                                                      ),
-                                                      child: Image.asset(
-                                                          transection['icon']!),
-                                                    ),
-                                                    title: Text(
-                                                      transection['title']!,
-                                                      style: TextStyle(
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          fontSize: 16),
-                                                    ),
-                                                    subtitle: Text(
-                                                      '${transection['phone']}',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff4A5763),
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          fontSize: 12),
-                                                    ),
-                                                    trailing: SizedBox(
-                                                      width: 200,
-                                                      child: Column(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .end,
-                                                        children: [
-                                                          Text(
-                                                            '${transection['amount']}',
-                                                            style: TextStyle(
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              fontSize: 16,
-                                                            ),
-                                                          ),
-                                                          Expanded(
-                                                            child: Text(
-                                                              '${transection['date']}',
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                                fontSize: 12,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                );
-                                              },
-                                            )
-                                          ],
-                                        ),
-                                      ),
+                                      // Container(
+                                      //   decoration: BoxDecoration(
+                                      //       borderRadius:
+                                      //           BorderRadius.circular(16),
+                                      //       color: Color(0xffF5F5F5)),
+                                      //   child: Column(
+                                      //     mainAxisSize: MainAxisSize.min,
+                                      //     children: [
+                                      //       SizedBox(height: 12),
+                                      //       Image.asset(
+                                      //           'assets/images/line.png'),
+                                      //       Container(
+                                      //         padding: EdgeInsets.only(
+                                      //             top: 20, left: 15, right: 15),
+                                      //         child: Row(
+                                      //           mainAxisAlignment:
+                                      //               MainAxisAlignment
+                                      //                   .spaceBetween,
+                                      //           children: [
+                                      //             Text(
+                                      //               'Transactions',
+                                      //               style: TextStyle(
+                                      //                   fontSize: 18,
+                                      //                   fontWeight:
+                                      //                       FontWeight.w500),
+                                      //             ),
+                                      //             Text(
+                                      //               'See all',
+                                      //               style: TextStyle(
+                                      //                   fontWeight:
+                                      //                       FontWeight.w400,
+                                      //                   fontSize: 16),
+                                      //             ),
+                                      //           ],
+                                      //         ),
+                                      //       ),
+                                      //       ListView.builder(
+                                      //         padding: EdgeInsets.zero,
+                                      //         itemCount: transactions.length,
+                                      //         shrinkWrap: true,
+                                      //         physics:
+                                      //             NeverScrollableScrollPhysics(),
+                                      //         itemBuilder: (context, index) {
+                                      //           final transection =
+                                      //               transactions[index];
+                                      //           return GestureDetector(
+                                      //             onTap: () {
+                                      //               _showPaymentDialog(
+                                      //                 context,
+                                      //                 transection,
+                                      //               );
+                                      //             },
+                                      //             child: ListTile(
+                                      //               contentPadding:
+                                      //                   EdgeInsets.only(
+                                      //                       left: 15,
+                                      //                       right: 15),
+                                      //               leading: Container(
+                                      //                 padding:
+                                      //                     EdgeInsets.all(12),
+                                      //                 decoration: BoxDecoration(
+                                      //                   shape: BoxShape.circle,
+                                      //                   color: Colors.white,
+                                      //                 ),
+                                      //                 child: Image.asset(
+                                      //                     transection['icon']!),
+                                      //               ),
+                                      //               title: Text(
+                                      //                 transection['title']!,
+                                      //                 style: TextStyle(
+                                      //                     color: Colors.black,
+                                      //                     fontWeight:
+                                      //                         FontWeight.w700,
+                                      //                     fontSize: 16),
+                                      //               ),
+                                      //               subtitle: Text(
+                                      //                 '${transection['phone']}',
+                                      //                 style: TextStyle(
+                                      //                     color:
+                                      //                         Color(0xff4A5763),
+                                      //                     fontWeight:
+                                      //                         FontWeight.w400,
+                                      //                     fontSize: 12),
+                                      //               ),
+                                      //               trailing: SizedBox(
+                                      //                 width: 200,
+                                      //                 child: Column(
+                                      //                   crossAxisAlignment:
+                                      //                       CrossAxisAlignment
+                                      //                           .end,
+                                      //                   children: [
+                                      //                     Text(
+                                      //                       '${transection['amount']}',
+                                      //                       style: TextStyle(
+                                      //                         color:
+                                      //                             Colors.black,
+                                      //                         fontWeight:
+                                      //                             FontWeight
+                                      //                                 .w500,
+                                      //                         fontSize: 16,
+                                      //                       ),
+                                      //                     ),
+                                      //                     Expanded(
+                                      //                       child: Text(
+                                      //                         '${transection['date']}',
+                                      //                         style: TextStyle(
+                                      //                           fontWeight:
+                                      //                               FontWeight
+                                      //                                   .w400,
+                                      //                           fontSize: 12,
+                                      //                         ),
+                                      //                       ),
+                                      //                     ),
+                                      //                   ],
+                                      //                 ),
+                                      //               ),
+                                      //             ),
+                                      //           );
+                                      //         },
+                                      //       )
+                                      //     ],
+                                      //   ),
+                                      // ),
                                     ],
                                   ),
                                 ),

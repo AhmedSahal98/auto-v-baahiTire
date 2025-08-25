@@ -34,7 +34,7 @@ class _Splash_screenState extends State<Splash_screen> {
       body: Center(
         child: Image.asset(
           'assets/images/degdeg2.jpeg',
-          height: 180,
+          height: 120,
           width: 180,
         ),
       ),

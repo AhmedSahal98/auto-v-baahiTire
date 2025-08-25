@@ -9,7 +9,7 @@ class ShirkadahaRep {
 
     try {
       final response = await http.get(Uri.parse(
-          'https://autov.easytouch.cloud/api/method/autov.api.get_package_data?company_id=baahi&key=nX067lIGpTL7'));
+          'https://autov.easytouch.cloud/api/method/autov.api.get_package_data?company_id=degdeg&key=4WeU1jsUWaV3'));
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(response.body);
@@ -44,7 +44,7 @@ class ShirkadahaRep {
 
     try {
       final response = await http.get(Uri.parse(
-          'https://autov.easytouch.cloud/api/method/autov.api.get_package_data?company_id=baahi&key=nX067lIGpTL7'));
+          'https://autov.easytouch.cloud/api/method/autov.api.get_package_data?company_id=degdeg&key=4WeU1jsUWaV3'));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
