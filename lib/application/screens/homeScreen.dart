@@ -70,241 +70,238 @@ class _HomeScreenState extends State<HomeScreen> {
                         physics: const AlwaysScrollableScrollPhysics(),
                         child: Column(
                           children: [
-                            Transform.translate(
-                              offset: const Offset(0, -15),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              width: MediaQuery.of(context).size.width,
                               child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                ),
-                                width: MediaQuery.of(context).size.width,
-                                child: Container(
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        margin: EdgeInsets.only(
-                                            left: 20, right: 20),
-                                        child: Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 6,
-                                            ),
-                                            Shirkadaha(),
-                                            CarouselSlider(
-                                                options: CarouselOptions(
-                                                  autoPlay: true,
-                                                  clipBehavior: Clip.none,
-                                                  height: 180,
-                                                  autoPlayInterval:
-                                                      Duration(seconds: 2),
-                                                  autoPlayCurve:
-                                                      Curves.fastOutSlowIn,
-                                                  viewportFraction: 1.05,
-                                                  onPageChanged:
-                                                      (index, reason) {
-                                                    setState(() {
-                                                      _currentIndex = index;
-                                                    });
-                                                  },
-                                                ),
-                                                items: banners!.map((banner) {
-                                                  return GestureDetector(
-                                                      onTap: () {
-                                                        if (banner.url !=
-                                                                null &&
-                                                            banner.url!
-                                                                .isNotEmpty) {
-                                                          launchUrl(Uri.parse(
-                                                              banner.url!));
-                                                        }
-                                                      },
-                                                      child: Container(
-                                                        margin: EdgeInsets.only(
-                                                            left: 3),
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(16),
-                                                        ),
-                                                        child: ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(16),
-                                                          child:
-                                                              CachedNetworkImage(
-                                                            imageUrl:
-                                                                banner.slider!,
-                                                            fit: BoxFit.cover,
-                                                            width:
-                                                                double.infinity,
-                                                            height:
-                                                                double.infinity,
-                                                            errorWidget:
-                                                                (context, error,
-                                                                    stackTrace) {
-                                                              return Container(
-                                                                color: Colors
-                                                                    .grey
-                                                                    .shade300,
-                                                                child: Center(
-                                                                  child: Icon(
-                                                                    Icons
-                                                                        .broken_image,
-                                                                    size: 40,
-                                                                    color: Colors
-                                                                        .grey,
-                                                                  ),
-                                                                ),
-                                                              );
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ));
-                                                }).toList()),
-                                            SizedBox(
-                                              height: 5,
-                                            ),
-                                            AnimatedSmoothIndicator(
-                                                activeIndex: _currentIndex,
-                                                count: banners!.length,
-                                                effect: WormEffect(
-                                                    dotWidth: (addwidth ==
-                                                            _currentIndex)
-                                                        ? 25
-                                                        : 10,
-                                                    dotHeight: 10,
-                                                    activeDotColor:
-                                                        Colors.black,
-                                                    dotColor: Colors.grey)),
-                                          ],
-                                        ),
-                                      ),
-                                      SizedBox(height: 12),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(16),
-                                            color: Color(0xffF5F5F5)),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            SizedBox(height: 12),
-                                            Image.asset(
-                                                'assets/images/line.png'),
-                                            Container(
-                                              padding: EdgeInsets.only(
-                                                  top: 20, left: 15, right: 15),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    'Transactions',
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w500),
-                                                  ),
-                                                  Text(
-                                                    'See all',
-                                                    style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.w400,
-                                                        fontSize: 16),
-                                                  ),
-                                                ],
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      margin: EdgeInsets.only(
+                                          left: 20, right: 20),
+                                      child: Column(
+                                        children: [
+                                          SizedBox(
+                                            height: 6,
+                                          ),
+                                          Shirkadaha(),
+                                          CarouselSlider(
+                                              options: CarouselOptions(
+                                                autoPlay: true,
+                                                clipBehavior: Clip.none,
+                                                height: 180,
+                                                autoPlayInterval:
+                                                    Duration(seconds: 2),
+                                                autoPlayCurve:
+                                                    Curves.fastOutSlowIn,
+                                                viewportFraction: 1.05,
+                                                onPageChanged:
+                                                    (index, reason) {
+                                                  setState(() {
+                                                    _currentIndex = index;
+                                                  });
+                                                },
                                               ),
-                                            ),
-                                            ListView.builder(
-                                              padding: EdgeInsets.zero,
-                                              itemCount: transactions.length,
-                                              shrinkWrap: true,
-                                              physics:
-                                                  NeverScrollableScrollPhysics(),
-                                              itemBuilder: (context, index) {
-                                                final transection =
-                                                    transactions[index];
+                                              items: banners!.map((banner) {
                                                 return GestureDetector(
-                                                  onTap: () {
-                                                    _showPaymentDialog(
-                                                      context,
-                                                      transection,
-                                                    );
-                                                  },
-                                                  child: ListTile(
-                                                    contentPadding:
-                                                        EdgeInsets.only(
-                                                            left: 15,
-                                                            right: 15),
-                                                    leading: Container(
-                                                      padding:
-                                                          EdgeInsets.all(12),
-                                                      decoration: BoxDecoration(
-                                                        shape: BoxShape.circle,
-                                                        color: Colors.white,
+                                                    onTap: () {
+                                                      if (banner.url !=
+                                                              null &&
+                                                          banner.url!
+                                                              .isNotEmpty) {
+                                                        launchUrl(Uri.parse(
+                                                            banner.url!));
+                                                      }
+                                                    },
+                                                    child: Container(
+                                                      margin: EdgeInsets.only(
+                                                          left: 3),
+                                                      decoration:
+                                                          BoxDecoration(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(16),
                                                       ),
-                                                      child: Image.asset(
-                                                          transection['icon']!),
-                                                    ),
-                                                    title: Text(
-                                                      transection['title']!,
-                                                      style: TextStyle(
-                                                          color: Colors.black,
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          fontSize: 16),
-                                                    ),
-                                                    subtitle: Text(
-                                                      '${transection['phone']}',
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xff4A5763),
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          fontSize: 12),
-                                                    ),
-                                                    trailing: SizedBox(
-                                                      width: 200,
-                                                      child: Column(
-                                                        crossAxisAlignment:
-                                                            CrossAxisAlignment
-                                                                .end,
-                                                        children: [
-                                                          Text(
-                                                            '${transection['amount']}',
-                                                            style: TextStyle(
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              fontSize: 16,
-                                                            ),
-                                                          ),
-                                                          Expanded(
-                                                            child: Text(
-                                                              '${transection['date']}',
-                                                              style: TextStyle(
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
-                                                                fontSize: 12,
+                                                      child: ClipRRect(
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(16),
+                                                        child:
+                                                            CachedNetworkImage(
+                                                          imageUrl:
+                                                              banner.slider!,
+                                                          fit: BoxFit.cover,
+                                                          width:
+                                                              double.infinity,
+                                                          height:
+                                                              double.infinity,
+                                                          errorWidget:
+                                                              (context, error,
+                                                                  stackTrace) {
+                                                            return Container(
+                                                              color: Colors
+                                                                  .grey
+                                                                  .shade300,
+                                                              child: Center(
+                                                                child: Icon(
+                                                                  Icons
+                                                                      .broken_image,
+                                                                  size: 40,
+                                                                  color: Colors
+                                                                      .grey,
+                                                                ),
                                                               ),
-                                                            ),
-                                                          ),
-                                                        ],
+                                                            );
+                                                          },
+                                                        ),
                                                       ),
-                                                    ),
-                                                  ),
-                                                );
-                                              },
-                                            )
-                                          ],
-                                        ),
+                                                    ));
+                                              }).toList()),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          AnimatedSmoothIndicator(
+                                              activeIndex: _currentIndex,
+                                              count: banners!.length,
+                                              effect: WormEffect(
+                                                  dotWidth: (addwidth ==
+                                                          _currentIndex)
+                                                      ? 25
+                                                      : 10,
+                                                  dotHeight: 10,
+                                                  activeDotColor:
+                                                      Colors.black,
+                                                  dotColor: Colors.grey)),
+                                        ],
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                    SizedBox(height: 12),
+                                    // Container(
+                                    //   decoration: BoxDecoration(
+                                    //       borderRadius:
+                                    //           BorderRadius.circular(16),
+                                    //       color: Color(0xffF5F5F5)),
+                                    //   child: Column(
+                                    //     mainAxisSize: MainAxisSize.min,
+                                    //     children: [
+                                    //       SizedBox(height: 12),
+                                    //       Image.asset(
+                                    //           'assets/images/line.png'),
+                                    //       Container(
+                                    //         padding: EdgeInsets.only(
+                                    //             top: 20, left: 15, right: 15),
+                                    //         child: Row(
+                                    //           mainAxisAlignment:
+                                    //               MainAxisAlignment
+                                    //                   .spaceBetween,
+                                    //           children: [
+                                    //             Text(
+                                    //               'Transactions',
+                                    //               style: TextStyle(
+                                    //                   fontSize: 18,
+                                    //                   fontWeight:
+                                    //                       FontWeight.w500),
+                                    //             ),
+                                    //             Text(
+                                    //               'See all',
+                                    //               style: TextStyle(
+                                    //                   fontWeight:
+                                    //                       FontWeight.w400,
+                                    //                   fontSize: 16),
+                                    //             ),
+                                    //           ],
+                                    //         ),
+                                    //       ),
+                                    //       ListView.builder(
+                                    //         padding: EdgeInsets.zero,
+                                    //         itemCount: transactions.length,
+                                    //         shrinkWrap: true,
+                                    //         physics:
+                                    //             NeverScrollableScrollPhysics(),
+                                    //         itemBuilder: (context, index) {
+                                    //           final transection =
+                                    //               transactions[index];
+                                    //           return GestureDetector(
+                                    //             onTap: () {
+                                    //               _showPaymentDialog(
+                                    //                 context,
+                                    //                 transection,
+                                    //               );
+                                    //             },
+                                    //             child: ListTile(
+                                    //               contentPadding:
+                                    //                   EdgeInsets.only(
+                                    //                       left: 15,
+                                    //                       right: 15),
+                                    //               leading: Container(
+                                    //                 padding:
+                                    //                     EdgeInsets.all(12),
+                                    //                 decoration: BoxDecoration(
+                                    //                   shape: BoxShape.circle,
+                                    //                   color: Colors.white,
+                                    //                 ),
+                                    //                 child: Image.asset(
+                                    //                     transection['icon']!),
+                                    //               ),
+                                    //               title: Text(
+                                    //                 transection['title']!,
+                                    //                 style: TextStyle(
+                                    //                     color: Colors.black,
+                                    //                     fontWeight:
+                                    //                         FontWeight.w700,
+                                    //                     fontSize: 16),
+                                    //               ),
+                                    //               subtitle: Text(
+                                    //                 '${transection['phone']}',
+                                    //                 style: TextStyle(
+                                    //                     color:
+                                    //                         Color(0xff4A5763),
+                                    //                     fontWeight:
+                                    //                         FontWeight.w400,
+                                    //                     fontSize: 12),
+                                    //               ),
+                                    //               trailing: SizedBox(
+                                    //                 width: 200,
+                                    //                 child: Column(
+                                    //                   crossAxisAlignment:
+                                    //                       CrossAxisAlignment
+                                    //                           .end,
+                                    //                   children: [
+                                    //                     Text(
+                                    //                       '${transection['amount']}',
+                                    //                       style: TextStyle(
+                                    //                         color:
+                                    //                             Colors.black,
+                                    //                         fontWeight:
+                                    //                             FontWeight
+                                    //                                 .w500,
+                                    //                         fontSize: 16,
+                                    //                       ),
+                                    //                     ),
+                                    //                     Expanded(
+                                    //                       child: Text(
+                                    //                         '${transection['date']}',
+                                    //                         style: TextStyle(
+                                    //                           fontWeight:
+                                    //                               FontWeight
+                                    //                                   .w400,
+                                    //                           fontSize: 12,
+                                    //                         ),
+                                    //                       ),
+                                    //                     ),
+                                    //                   ],
+                                    //                 ),
+                                    //               ),
+                                    //             ),
+                                    //           );
+                                    //         },
+                                    //       )
+                                    //     ],
+                                    //   ),
+                                    // ),
+                                  ],
                                 ),
                               ),
                             ),
